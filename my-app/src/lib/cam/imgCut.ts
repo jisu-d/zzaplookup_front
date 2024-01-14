@@ -32,9 +32,9 @@ export function cropImage(Imgae: HTMLCanvasElement) {
     const cropper = new Cropper(Imgae, {
         aspectRatio: 4 / 5,
         viewMode: 1,
-        async ready() {
+        ready() {
             const croppedCanvas = cropper.getCroppedCanvas();
-            const croppedDataURL = await croppedCanvas.toDataURL('image/png');
+            const croppedDataURL = croppedCanvas.toDataURL('image/png');
             console.log(croppedDataURL);
             cropImaged = croppedDataURL
             cropper.destroy();

@@ -146,7 +146,6 @@
         canvasElement.width = videoSource.videoWidth;
         canvasElement.height = videoSource.videoHeight;
 
-        // capturedImages 배열을 순회하며 각 이미지를 가져와서 캔버스에 그립니다.
         
         capturedImages = await cropImages(capturedImages)
         
